@@ -1,4 +1,11 @@
+using Catalog.API;
+using Catalog.API.Endpoints;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<CatalogContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -13,7 +20,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var catalogGroup = app.MapGroup("catalog");
-catalogGroup.MapGet("items", () => Results.Ok());
+app.MapCatalogEndpoints();
 
 app.Run();
