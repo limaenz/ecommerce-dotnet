@@ -1,6 +1,6 @@
-using Catalog.API.Models;
+using Catalog.API.Entities;
 
-namespace Catalog.API.DTOs
+namespace Catalog.API.DTOs.Responses
 {
     public sealed record CategoryResponse
     {
