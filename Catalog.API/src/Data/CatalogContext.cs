@@ -1,8 +1,8 @@
-using Catalog.API.Configurations;
-using Catalog.API.Models;
+using Catalog.API.Data.Configurations;
+using Catalog.API.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Catalog.API
+namespace Catalog.API.Data
 {
     public class CatalogContext(DbContextOptions<CatalogContext> options) : DbContext(options)
     {

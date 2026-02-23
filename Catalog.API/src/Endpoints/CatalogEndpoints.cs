@@ -1,5 +1,7 @@
-using Catalog.API.DTOs;
-using Catalog.API.Models;
+using Catalog.API.Data;
+using Catalog.API.DTOs.Requests;
+using Catalog.API.DTOs.Responses;
+using Catalog.API.Entities;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 

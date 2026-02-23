@@ -1,4 +1,4 @@
-namespace Catalog.API.DTOs
+namespace Catalog.API.DTOs.Requests
 {
     public sealed record CreateCategoryRequest
     {

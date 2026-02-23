@@ -1,4 +1,4 @@
-using Catalog.API;
+using Catalog.API.Data;
 using Catalog.API.Endpoints;
 using Microsoft.EntityFrameworkCore;
 
