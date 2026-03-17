@@ -1,6 +1,6 @@
-using Catalog.API.Entities;
+using Catalog.API.Features.Shared.Entities;
 
-namespace Catalog.API.DTOs.Responses
+namespace Catalog.API.Features.Categories.CreateCategory
 {
     public sealed record CategoryResponse
     {

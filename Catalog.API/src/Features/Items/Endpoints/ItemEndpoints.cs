@@ -1,20 +1,18 @@
-using Catalog.API.Data;
-using Catalog.API.DTOs.Requests;
-using Catalog.API.DTOs.Responses;
-using Catalog.API.Entities;
+using Catalog.API.Features.Items.Shared;
+using Catalog.API.Features.Shared.Data;
+using Catalog.API.Features.Shared.Entities;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
-namespace Catalog.API.Endpoints;
+namespace Catalog.API.Features.Items.CreateItem;
 
-public static class CatalogEndpoints
+public static class ItemEndpoints
 {
-    public static void MapCatalogEndpoints(this IEndpointRouteBuilder app)
+    public static void MapItemEndpoints(this IEndpointRouteBuilder app)
     {
         var group = app.MapGroup("catalog");
         group.MapGet("items", GetItems);
         group.MapPost("items", CreateItem);
-        group.MapPost("categories", CreateCategory);
     }
 
     private static async Task<Ok<List<ItemResponse>>> GetItems(CatalogContext db)
@@ -48,19 +46,5 @@ public static class CatalogEndpoints
         var response = ItemResponse.FromEntity(newItem);
 
         return TypedResults.Created($"/items/{newItem.Id}", response);
-    }
-
-    private static async Task<Created<CategoryResponse>> CreateCategory(
-        CreateCategoryRequest request,
-        CatalogContext db)
-    {
-        var newCategory = Category.CreateCategory(request.Name);
-
-        db.Categories.Add(newCategory);
-        await db.SaveChangesAsync();
-
-        var response = CategoryResponse.FromEntity(newCategory);
-
-        return TypedResults.Created($"/categories/{newCategory.Id}", response);
     }
 }
