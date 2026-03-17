@@ -1,5 +1,6 @@
-using Catalog.API.Data;
-using Catalog.API.Endpoints;
+using Catalog.API.Features.Categories.Endpoints;
+using Catalog.API.Features.Items.Endpoints;
+using Catalog.API.Features.Shared.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +21,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapCatalogEndpoints();
+app.MapCategoryEndpoints();
+app.MapItemEndpoints();
 
 app.Run();
