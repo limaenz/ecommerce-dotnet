@@ -2,14 +2,14 @@ using Catalog.API.Features.Categories.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Catalog.API.Features.Shared.Data.Configurations
+namespace Catalog.API.Features.Categories.Data.Configurations
 {
     public class CategoryConfiguration : IEntityTypeConfiguration<Category>
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
             builder.ToTable("categories");
-        
+
             builder.HasKey(item => item.Id);
             builder.Property(x => x.Name)
                 .IsRequired()

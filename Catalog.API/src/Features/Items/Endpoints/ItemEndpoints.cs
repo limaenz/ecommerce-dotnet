@@ -1,10 +1,11 @@
-using Catalog.API.Features.Items.Shared;
+using Catalog.API.Features.Items.DTOs.Requests;
+using Catalog.API.Features.Items.DTOs.Responses;
+using Catalog.API.Features.Items.Entities;
 using Catalog.API.Features.Shared.Data;
-using Catalog.API.Features.Shared.Entities;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
-namespace Catalog.API.Features.Items.CreateItem;
+namespace Catalog.API.Features.Items.Endpoints;
 
 public static class ItemEndpoints
 {

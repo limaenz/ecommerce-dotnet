@@ -1,6 +1,6 @@
-using Catalog.API.Features.Shared.Entities;
+using Catalog.API.Features.Items.Entities;
 
-namespace Catalog.API.Features.Items.Shared
+namespace Catalog.API.Features.Items.DTOs.Responses
 {
     public sealed record ItemResponse
     {

@@ -1,4 +1,4 @@
-namespace Catalog.API.Features.Items.CreateItem
+namespace Catalog.API.Features.Items.DTOs.Requests
 {
     public sealed record CreateItemRequest
     {

@@ -2,7 +2,7 @@ using Catalog.API.Features.Items.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Catalog.API.Features.Shared.Data.Configurations
+namespace Catalog.API.Features.Items.Data.Configurations
 {
     public class ItemConfiguration : IEntityTypeConfiguration<Item>
     {
