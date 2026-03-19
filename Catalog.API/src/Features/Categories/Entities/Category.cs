@@ -1,4 +1,4 @@
-namespace Catalog.API.Features.Shared.Entities
+namespace Catalog.API.Features.Categories.Entities
 {
     public sealed class Category
     {
