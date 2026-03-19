@@ -1,4 +1,6 @@
-namespace Catalog.API.Features.Shared.Entities
+using Catalog.API.Features.Categories.Entities;
+
+namespace Catalog.API.Features.Items.Entities
 {
     public sealed class Item
     {

@@ -1,9 +1,10 @@
-using Catalog.API.Features.Categories.CreateCategory;
+using Catalog.API.Features.Categories.DTOs.Requests;
+using Catalog.API.Features.Categories.DTOs.Responses;
+using Catalog.API.Features.Categories.Entities;
 using Catalog.API.Features.Shared.Data;
-using Catalog.API.Features.Shared.Entities;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace Catalog.API.Features.Categories.Shared;
+namespace Catalog.API.Features.Categories.Endpoints;
 
 public static class CategoryEndpoints
 {
